@@ -1,37 +1,26 @@
 export const initialStore=()=>{
   return{
     message: null,
-    todos: []
+    contacts: []
   }
 }
 
 export default function storeReducer(store, action) {
   let id
   switch(action.type){
-    case 'get_tasks':
-      fetch("https://playground.4geeks.com/contact/agendas/EnriqueM/contacts")
-      .then(response => response.json())
-      .then(data => {
-      // console.log(data);
-        
-        return {
-          ...store,
-          todos:data.contacts
-        }
-      })
-      break;
-
-
-
-    case 'add_task':
-      id = action.payload.id
-      color = action.payload.color
-    
+    case 'get_contacts':
+      console.log(action.payload);
       
-      return {
+      return{
         ...store,
-        todos: store.todos.map((todo) => (todo.id === id ? { ...todo, background: color } : todo))
-      };
+        contacts:action.payload
+      }
+      case 'put_contacts':
+
+      return {
+
+      }
+      
       case 'delete_task':
 
       const id = action.payload
