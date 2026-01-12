@@ -61,7 +61,7 @@ const Contacto = () => {
                             <input type="text" className="form-control" value={address} onInput={(e) => { setAddress(e.target.value) }} />
                         </div>
                         <button type="submit" className="btn btn-primary" onClick={handleAdd}>Agregar</button>
-                        <Link className="btn btn-primary" type="button" to={"/"}>Regresar</Link>
+                        <Link className="btn btn-primary ms-2" type="button" to={"/"}>Regresar</Link>
                     </form>
                 </div>
             </div>

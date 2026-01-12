@@ -15,12 +15,6 @@ export default function storeReducer(store, action) {
         ...store,
         contacts:action.payload
       }
-      case 'put_contacts':
-
-      return {
-
-      }
-      
       case 'delete_task':
 
       const id = action.payload

@@ -8,6 +8,9 @@ export const Navbar = () => {
 				<Link to="/">
 					<span className="navbar-brand mb-0 h1">Contact List</span>
 				</Link>
+				<Link to={"/addcontact"}>
+				<button className="btn btn-primary h1">Add new contact</button>
+				</Link>
 			</div>
 		</nav>
 	);
